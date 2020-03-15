@@ -22,14 +22,15 @@ public class MainActivity extends AppCompatActivity {
     // CONFIGURATION
     // -------------------
 
-    private void configureAndShowMainFragment(){
-
+    private void configureAndShowMainFragment()
+    {
         mainFragment = (MainFragment) getSupportFragmentManager().findFragmentById(R.id.activity_main_frame_layout);
 
-        if (mainFragment == null) {
+        if(mainFragment == null)
+        {
             mainFragment = new MainFragment();
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.activity_main_frame_layout, mainFragment)
+                    .add(R.id.activity_main_frame_layout,mainFragment)
                     .commit();
         }
     }
